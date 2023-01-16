@@ -1,0 +1,19 @@
+<!DOCTTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Today's Weather</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/weather.css') }}"
+    </head>
+    <body>
+        <div id="weather">
+            <h1> Weather in {{ location }} </h1>
+            <h1>{{ temp }}° F</h1>
+            <h2>{{ weather }}</h2>
+            <h2>Min - Max</h2>
+            <h2>{{ temp_min }}° F - {{ temp_max }}° F </h2>
+            <h4>Feels like: {{ feels_like }}° F</h4>
+        </div>
+        <button class="weatherText" id="Submit" onclick="location.href='home.html';" type="button">Find the weather of another place!</button>
+    </body>
+</html>

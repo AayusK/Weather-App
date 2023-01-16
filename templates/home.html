@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Weather</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/home.css') }}">
+    </head>
+    <body>
+        <h2 class="weatherText">Weather Lookup</h2>
+        <form class="weatherText" id="form" action="{{url_for('render_result')}}" method="post">
+            City name: <input class="weatherText" id="cityNameInput" type="text" name="city_name"><br>
+            State Code: <input class="weatherText" id="stateCodeInput" type="text" name="state_code"><br>
+            Country Code (If left empty defaults to US): <input class="weatherText" id="countryCodeInput" type="text" name="country_code"><br>
+            <input class="weatherText" id="Submit" type="submit" value="Submit">
+        </form>
+        <button class="weatherText" id="Submit" onclick="location.href='coordinates.html';" type="button">Lookup by Coordinates</button>
+    </body>
+</html>

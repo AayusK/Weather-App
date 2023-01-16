@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Error Message</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/error.css') }}"
+    </head>
+    <body>
+        <div id="error">
+            {% if message %}
+                <h1>{{ message }}</h1>
+            {% else %}
+                <h1>An error occurred</h1>
+            {% endif %}
+        </div>
+        <button class="weatherText" id="Submit" onclick="location.href='home.html';" type="button">Try again</button>
+    </body>
+</html>

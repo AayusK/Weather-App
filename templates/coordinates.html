@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Weather</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/home.css') }}"
+    </head>
+    <body>
+        <h2 class="weatherText">Weather Lookup</h2>
+        <form class="weatherText" id="form" action="{{url_for('render_result_coordinates')}}" method="post">
+            Latitude: (Positive when North, Negative when South) <input class="weatherText" id="Input" type="text" name="latitude"><br>
+            Longitude: (Positive when East, Negative when West) <input class="weatherText" id="Input" type="text" name="longitude"><br>
+            <input class="weatherText" id="Submit" type="submit" value="Submit">
+        </form>
+        <button class="weatherText" id="Submit" onclick="location.href='home.html';" type="button">Look up with ZipCode</button>
+    </body>
+</html>
